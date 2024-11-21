@@ -1,0 +1,180 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f7f7;
+    padding: 15px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header #logo {
+    width: 170px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+nav button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+main {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 115px);
+    box-sizing: border-box;
+}
+
+.laboratorios-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.agregar-laboratorio {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    width: auto;
+}
+
+.agregar-laboratorio:hover {
+    background-color: #004c99;
+}
+
+.laboratorios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+.laboratorio {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 500px;
+}
+
+.laboratorio img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.laboratorio-content {
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.laboratorio h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.laboratorio p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.laboratorio button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    max-width: 100%;
+}
+
+.laboratorio button:hover {
+    background-color: #004c99;
+}
+
+.laboratorios-vacio {
+    margin-top: 50px;
+}
+
+/* Estilos Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start; /* Alinear el logo a la izquierda */
+    }
+
+    header #logo {
+        margin-bottom: 10px;
+    }
+
+    .laboratorios-header {
+        justify-content: center; /* Centrar el botón en móviles */
+        width: 100%;
+    }
+
+    .agregar-laboratorio {
+        width: auto;
+        margin: 10px 0;
+    }
+
+    .laboratorios {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+
+    .laboratorio {
+        width: 100%;
+    }
+
+    .btn-eliminar, .laboratorio-content button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    nav button {
+        width: auto;
+        margin: 5px 0;
+    }
+
+    main {
+        align-items: center;
+    }
+}
